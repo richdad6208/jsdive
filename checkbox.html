@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <label for="success">제성이는 성공한다</label>
+    <input type="checkbox" id="success" />
+    <script>
+      const $checkBox = document.querySelector("input[type='checkbox']");
+
+      $checkBox.onchange = (e) => {
+        const $label = document.querySelector("label");
+        if (e.target.checked) {
+          $label.style.color = "red";
+        } else {
+          $label.style.color = "black";
+        }
+      };
+    </script>
+  </body>
+</html>
