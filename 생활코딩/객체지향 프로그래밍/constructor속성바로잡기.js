@@ -10,6 +10,7 @@ function PersonPlus(name, first, second, third) {
   Person.call(this, name, first, second);
   this.third = third;
 }
+//PersonPlus.prototype.__proto__ = Person.prototype
 PersonPlus.prototype = Object.create(Person.prototype);
 PersonPlus.prototype.constructor = PersonPlus;
 PersonPlus.prototype.avg = function () {
